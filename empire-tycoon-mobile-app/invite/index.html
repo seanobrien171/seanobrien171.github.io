@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- First-party only: no analytics, fonts, or third-party scripts; nothing is sent anywhere. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fffaf0">
+  <title>Empire Tycoon invite</title>
+  <!-- Link preview (iMessage and other crawlers): static, so it never shows the inviter's code or name.
+       Published at https://seanobrien171.github.io/empire-tycoon-mobile-app/invite/ from the public
+       seanobrien171/seanobrien171.github.io repo (this repo is private). card.jpg is 1200×630, under 1 MB,
+       so the same file also works as Airbridge's Social Share Preview image. -->
+  <meta name="description" content="Build businesses from your neighborhood to the whole world.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Empire Tycoon">
+  <meta property="og:title" content="You’re invited to Empire">
+  <meta property="og:description" content="Build businesses from your neighborhood to the whole world.">
+  <meta property="og:url" content="https://seanobrien171.github.io/empire-tycoon-mobile-app/invite/">
+  <meta property="og:image" content="https://seanobrien171.github.io/empire-tycoon-mobile-app/invite/card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Empire Tycoon: You’re invited to Empire">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="invite.css">
+  <script type="module" src="invite.js"></script>
+</head>
+<body>
+  <main class="page">
+    <img class="logo" src="icon-192.png" alt="" width="96" height="96">
+    <h1 id="headline">You’re invited to Empire</h1>
+    <p class="lede">Build businesses from your neighborhood to the whole world.</p>
+
+    <section id="invite-card" class="card" hidden>
+      <p class="card-label">Invite code</p>
+      <p id="code" class="code" aria-live="polite"></p>
+      <p class="card-note">“Get Empire” copies this invite. When you create your Empire account, the app asks to paste it, or you can type the code.</p>
+    </section>
+
+    <section id="no-invite" class="card" hidden>
+      <p class="card-note">This invite link is missing its code. Ask your friend to share it again, or get Empire and enter their code when you create your account.</p>
+    </section>
+
+    <div class="actions">
+      <a id="get-empire" class="button primary" href="https://apps.apple.com/app/id6817522924">Get Empire</a>
+      <a id="open-empire" class="button secondary" href="empiretycoon://">Open Empire</a>
+      <p class="hint">Already have Empire? Tap “Open Empire”.</p>
+      <p id="copy-status" class="status" role="status"></p>
+    </div>
+
+    <section id="copy-failed" class="card warning" hidden>
+      <p class="card-note"><strong>Copy didn’t work on this browser.</strong> Keep this code and type it in Empire when you create your account:</p>
+      <label class="visually-hidden" for="manual-code">Invite code</label>
+      <input id="manual-code" class="manual-code" type="text" readonly>
+      <a class="button primary" href="https://apps.apple.com/app/id6817522924">Continue to the App Store</a>
+    </section>
+  </main>
+</body>
+</html>
